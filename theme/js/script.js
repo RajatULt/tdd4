@@ -168,9 +168,9 @@
 
 	function initialize() {
 		var map;
-
-		var nottingham = new google.maps.LatLng(51.507351, -0.127758);
-
+	
+		var delhi = new google.maps.LatLng(28.6139, 77.2090); // Updated coordinates for Delhi
+	
 		var style = [{
 			'stylers': [{
 				'hue': '#ff61a6'
@@ -184,18 +184,18 @@
 				'lightness': 10
 			}]
 		}];
-
+	
 		var mapOptions = {
 			// SET THE CENTER
-			center: nottingham,
-
+			center: delhi, // Use the Delhi coordinates
+	
 			// SET THE MAP STYLE & ZOOM LEVEL
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
 			zoom: 17,
-
+	
 			// SET THE BACKGROUND COLOUR
 			backgroundColor: '#000',
-
+	
 			// REMOVE ALL THE CONTROLS EXCEPT ZOOM
 			panControl: false,
 			zoomControl: true,
@@ -206,28 +206,29 @@
 			zoomControlOptions: {
 				style: google.maps.ZoomControlStyle.LARGE
 			}
-
+	
 		};
 		map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
+	
 		// SET THE MAP TYPE
 		var mapType = new google.maps.StyledMapType(style, {
 			name: 'Grayscale'
 		});
 		map.mapTypes.set('grey', mapType);
 		map.setMapTypeId('grey');
-
-		//CREATE A CUSTOM PIN ICON
+	
+		// CREATE A CUSTOM PIN ICON
 		var marker_image = 'images/marker.png';
 		var pinIcon = new google.maps.MarkerImage(marker_image, null, null, null, new google.maps.Size(25, 33));
-
+	
 		var marker = new google.maps.Marker({
-			position: nottingham,
+			position: delhi, // Use the Delhi coordinates
 			map: map,
 			icon: pinIcon,
 			title: 'navigator'
 		});
 	}
+	
 
 	google.maps.event.addDomListener(window, 'load', initialize);
 
