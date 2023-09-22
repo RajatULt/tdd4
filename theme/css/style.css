@@ -538,7 +538,7 @@ a:focus, a:hover {
 
 .navbar-brand {
   height: auto;
-  padding: 8px 0;
+  padding: 0px 0px;
 }
 
 .navbar-brand h1 {
@@ -568,6 +568,11 @@ a:focus, a:hover {
   }
 }
 .hero-area .block h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.hero-area .block h3 {
+  color: #88e5ff;
   font-size: 48px;
   margin-bottom: 20px;
 }
@@ -1000,7 +1005,6 @@ a:focus, a:hover {
   border-radius: 30px;
   opacity: 0;
 }
-
 /*=================================================================
   Services section
 ==================================================================*/
